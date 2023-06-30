@@ -1,6 +1,5 @@
 package com.klu.tms.signupbean;
 
-
 import javax.ejb.Remote;
 
 import com.klu.tms.signupentity.RegisterUser;
