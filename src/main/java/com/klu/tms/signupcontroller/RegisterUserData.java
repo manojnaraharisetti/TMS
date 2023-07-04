@@ -1,5 +1,7 @@
 package com.klu.tms.signupcontroller;
 
+import java.lang.ProcessBuilder.Redirect;
+
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -51,7 +53,7 @@ public class RegisterUserData {
 	@EJB(lookup = "java:global/TMS/RegisterUserBeanImpl!com.klu.tms.signupbean.RegisterUserBean")
 	private RegisterUserBean eb;
 
-	public void insert() {
+	public String insert() {
 		try {
 			RegisterUser e = new RegisterUser();
 			e.setUsername(username);
@@ -63,6 +65,7 @@ public class RegisterUserData {
 		} catch (Exception e1) {
 			res_message = e1.getMessage();
 		}
+		return "index";
 	}
 
 	public String getPass() {

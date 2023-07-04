@@ -4,7 +4,6 @@ import javax.ejb.Stateless;
 import javax.persistence.*;
 
 import com.klu.tms.signupentity.RegisterUser;
-
 @Stateless
 public class RegisterUserBeanImpl implements RegisterUserBean {
 
@@ -18,7 +17,7 @@ public class RegisterUserBeanImpl implements RegisterUserBean {
 		em.close();
 		emf.close();
 
-		return "SignedUp Succesfully";
+		return "signupsuccessfully";
 	}
 
 }
