@@ -65,7 +65,7 @@ public class RegisterUserData {
 		} catch (Exception e1) {
 			res_message = e1.getMessage();
 		}
-		return "index";
+		return "login";
 	}
 
 	public String getPass() {

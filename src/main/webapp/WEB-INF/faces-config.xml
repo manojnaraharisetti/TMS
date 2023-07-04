@@ -8,8 +8,8 @@
 	<navigation-rule>
 		<from-view-id>/signup.jsf</from-view-id>
 		<navigation-case>
-			<from-outcome>index</from-outcome>
-			<to-view-id>/index.jsf</to-view-id>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/login.jsf</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

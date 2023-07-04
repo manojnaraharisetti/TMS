@@ -1,0 +1,64 @@
+<html xmlns:h="http://java.sun.com/jsf/html">
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        /* background: linear-gradient(to top, #e6c2fb 0%, #a6c1ee 100%) no-repeat center center fixed; */
+        background: linear-gradient(to top, #e29a9d 0%, #fcfbfb 100%) no-repeat
+          center center fixed;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        background-color: #e05080;
+        margin-top: 10px;
+        width: 60%;
+      }
+
+      nav ul {
+        display: flex;
+        margin: auto;
+      }
+
+      nav ul li {
+        list-style: none;
+      }
+      nav ul li a {
+        font-weight: bolder;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+        font-size: 33px;
+        font-family: Arial, sans-serif;
+      }
+      
+    </style>
+  </head>
+  <h:body>
+    <center>
+    <nav>
+      <ul>
+        <li><a href="#" aria-current="page" class="nav-link">Home</a></li>
+        <li><a href="#" aria-current="page" class="nav-link">About</a></li>
+        <li><a href="#" aria-current="page" class="nav-link">Contact</a></li>
+        <li><a href="login.jsf" aria-current="page" class="nav-link">Login</a></li>
+      </ul>
+    </nav>
+  </center>
+  </h:body>
+</html>

@@ -3,10 +3,10 @@
  <PROCESS-ITEM NAME="rules:#signup.jsf" PATH="/signup.jsf"
   SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#signup.jsf:0" NAME="item" PATH="/signup.jsf" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="index::#index.jsf" NAME="output"
-    PATH="/index.jsf" TARGET="rules:#index.jsf" TITLE="index" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login::#login.jsf" NAME="output"
+    PATH="/login.jsf" TARGET="rules:#login.jsf" TITLE="login" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#index.jsf" PATH="/index.jsf"
+ <PROCESS-ITEM NAME="rules:#login.jsf" PATH="/login.jsf"
   SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
