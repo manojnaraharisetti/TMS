@@ -1,5 +1,5 @@
-<html>
-<head>
+<html xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
   <meta charset="utf-8" />
   <title>KMR TENDER</title>
   <link rel="stylesheet" type="text/css" href="styles/loginsignup.css" />
@@ -16,9 +16,9 @@
     transform: rotate(-12deg) skew(-12deg);
 }
   </style>
-</head>
+</h:head>
 
-<body>
+<h:body>
   <div class="login-root">
     <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
       <div class="loginbackground box-background--white padding-top--64">
@@ -60,10 +60,10 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <form id="stripe-login">
+              <h:form id="stripe-login">
                 <div class="field padding-bottom--24">
                   <label for="username"><b>Username</b></label>
-                  <input type="text" name="username" required="required"/>
+                  <h:inputText type="text" name="username" value="#{login.username}" required="required"/>
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -72,15 +72,15 @@
                       <a href="#">Forgot your password?</a>
                     </div>
                   </div>
-                  <input type="password" name="password" required="required"/>
+                  <h:inputText type="password" name="password" value="#{login.password}" required="required"/>
                 </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="SignIn" />
+                  <h:commandButton action="#{login.validateUsernamePassword()}" value="submit" name="submit" />
                 </div>
                 <div class="field">
                   <a class="ssolink" href="signup.jsf">Newbie? SignUp..!</a>
                 </div>
-              </form>
+              </h:form>
             </div>
           </div>
           
@@ -88,6 +88,6 @@
       </div>
     </div>
   </div>
-</body>
+</h:body>
 
 </html>

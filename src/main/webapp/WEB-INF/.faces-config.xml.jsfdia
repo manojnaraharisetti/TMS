@@ -8,5 +8,19 @@
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#login.jsf" PATH="/login.jsf"
-  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.jsf:0" NAME="item" PATH="/login.jsf" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#home.jsf" NAME="output"
+    PATH="/home.jsf" TARGET="rules:#home.jsf" TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#navbar.jsf" PATH="/navbar.jsf"
+  SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#navbar.jsf:0" NAME="item" PATH="/navbar.jsf" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="Logout::#login.jsf" NAME="output"
+    PATH="/login.jsf" TARGET="rules:#login.jsf" TITLE="Logout" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#home.jsf" PATH="/home.jsf"
+  SHAPE="464,17,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

@@ -1,4 +1,7 @@
-<html xmlns:h="http://java.sun.com/jsf/html">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
   <head>
     <style>
       * {
@@ -54,9 +57,14 @@
     <nav>
       <ul>
         <li><a href="#" aria-current="page" class="nav-link">Home</a></li>
-        <li><a href="#" aria-current="page" class="nav-link">About</a></li>
+        <li><a href="about.jsf" aria-current="page" class="nav-link">About</a></li>
         <li><a href="#" aria-current="page" class="nav-link">Contact</a></li>
-        <li><a href="login.jsf" aria-current="page" class="nav-link">Login</a></li>
+        <li>
+        	<h:form>
+        		<h:commandLink action="#{login.logout()}" value="Logout"  class="nav-link" aria-current="page"/>
+        	</h:form>
+        </li>
+        
       </ul>
     </nav>
   </center>
