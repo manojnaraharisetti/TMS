@@ -41,13 +41,13 @@ public class Login implements Serializable {
 		if (valid) {
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("username", username);
+			 FacesContext context = FacesContext.getCurrentInstance();
+		        context.addMessage(null, new FacesMessage("You have logged in successfully", "You have successfully registered and logged in"));
 			return "home";
+			
 		} else {
-			FacesContext.getCurrentInstance().addMessage(
-					null,
-					new FacesMessage(FacesMessage.SEVERITY_WARN,
-							"Incorrect Username and Passowrd",
-							"Please enter correct username and Password"));
+			FacesContext context = FacesContext.getCurrentInstance();
+			context.addMessage(null,new FacesMessage("Incorrect Username and Passowrd","Please enter correct username and Password"));
 			return "login";
 		}
 		

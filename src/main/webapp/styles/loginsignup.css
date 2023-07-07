@@ -203,6 +203,11 @@ a.ssolink {
   animation: animationLeftRight 4s ease-in-out infinite;
 }
 
+.error-message{
+	 color: red;
+    font-weight: bold;
+}
+
 @keyframes animationLeftRight {
   0% {
     transform: translateX(0px);
