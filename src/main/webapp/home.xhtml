@@ -7,6 +7,7 @@
 <head>
 <title>Home page</title>
 <link rel="stylesheet" type="text/css" href="styles/home.css" />
+<link rel="stylesheet" type="text/css" href="styles/animation.css" />
 <script type="text/javascript">
 
 		</script>
@@ -92,6 +93,7 @@
   filter: blur(0px);
   }
 }
+
 .debug .jt__row:nth-child(even) {
 	color: black;
 	background: white;
@@ -103,40 +105,33 @@
 }
 
 html, body {
-  /* margin: 0;
+	/* margin: 0;
   background: rgb(244, 239, 239); */
-  color: rgb(242, 108, 139);
-  /* height: 50%; */
+	color: rgb(242, 108, 139);
+	/* height: 50%; */
 }
-
-
 </style>
 </head>
 <body>
 
 	<ui:decorate template="index.xhtml">
 		<ui:define name="first">
-		
-		 <h1 class="jt --debug">
-        <span class="jt__row">
-          <span class="jt__text">Hello #{login.username}</span>
-        </span>
-        <span class="jt__row jt__row--sibling" aria-hidden="true">
-          <span class="jt__text">Hello #{login.username}</span>
-        </span>
-        <span class="jt__row jt__row--sibling" aria-hidden="true">
-          <span class="jt__text">Hello #{login.username}</span>
-        </span>
-        <span class="jt__row jt__row--sibling" aria-hidden="true">
-          <span class="jt__text">Hello #{login.username}</span>
-        </span>
-      </h1>
-		
-	
 
+			<h1 class="jt --debug">
+				<span class="jt__row"> <span class="jt__text">Hello
+						#{login.username}</span>
+				</span> <span class="jt__row jt__row--sibling" aria-hidden="true"> <span
+					class="jt__text">Hello #{login.username}</span>
+				</span> <span class="jt__row jt__row--sibling" aria-hidden="true"> <span
+					class="jt__text">Hello #{login.username}</span>
+				</span> <span class="jt__row jt__row--sibling" aria-hidden="true"> <span
+					class="jt__text">Hello #{login.username}</span>
+				</span>
+			</h1>
+								
 			<h:messages style="color: green;
     font-weight: bold;" />
-		 	<div class="homebody">
+			<div class="homebody">
 				<div class="container">
 					<div class="card">
 						<div class="face face1">
@@ -147,10 +142,12 @@ html, body {
 						</div>
 						<div class="face face2">
 							<div class="content">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Quas cum cumque minus iste veritatis provident at.</p>
+								<p>In 2023, 31954 Project Management tenders are published by various Tendering Authorities.Various Ongoing tenders.
+								</p>
 								<center>
-									<a href="#">Read More</a>
+									<div class="arrow bounce">
+										<a href="ongoingtenders.jsf">Apply &#8594;</a>
+									</div>
 								</center>
 							</div>
 						</div>
@@ -167,7 +164,9 @@ html, body {
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									Quas cum cumque minus iste veritatis provident at.</p>
 								<center>
-									<a href="#">Read More</a>
+									<div class="arrow bounce">
+										<a href="ongoingtenders.xhtml">view &#8594;</a>
+									</div>
 								</center>
 							</div>
 						</div>
@@ -184,13 +183,32 @@ html, body {
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									Quas cum cumque minus iste veritatis provident at.</p>
 								<center>
-									<a href="#">Archives-></a>
+									<div class="arrow bounce">
+										<a href="#">Archives &#8594;</a>
+									</div>
 								</center>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div> 
+			</div>
+		
+		
+		<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+		
 		</ui:define>
 	</ui:decorate>
 </body>
