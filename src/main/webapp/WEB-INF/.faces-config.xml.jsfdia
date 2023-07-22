@@ -23,4 +23,14 @@
     PATH="/login.jsf" TARGET="rules:#login.jsf" TITLE="Logout" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#tender.jsf" PATH="/tender.jsf"
+  SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#tender.jsf:0" NAME="item" PATH="/tender.jsf" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ongoingtenders::#ongoingtenders.jsf"
+    NAME="output" PATH="/ongoingtenders.jsf"
+    TARGET="rules:#ongoingtenders.jsf" TITLE="ongoingtenders" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ongoingtenders.jsf"
+  PATH="/ongoingtenders.jsf" SHAPE="240,257,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

@@ -2,6 +2,7 @@ package com.klu.tms.ongoingtenderentity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,22 +12,35 @@ import javax.persistence.Table;
 public class OngoingTender implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
-	private String username;
+	private long id;
+	@Column(nullable = false)
+	private String tenderincharge;
+	@Column(nullable = false)
 	private String email;
+	@Column(nullable = false)
 	private String tendername;
+	@Column(nullable = false)
 	private String orgname;
+	@Column(nullable = false)
 	private String companyadd;
+	@Column(length = 10,nullable = false)
 	private String contactno1;
+	@Column(length = 10,nullable = false)
 	private String contactno2;
+	@Column(nullable = false)
 	private String amount;
+	@Column(length = 16,nullable = false)
 	private String aadhaar;
+	@Column(length = 10,nullable = false)
 	private String pan;
+	@Column(length = 15,nullable = false)
 	private String gst;
-	public String getUsername() {
-		return username;
+	
+	public String getTenderincharge() {
+		return tenderincharge;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setTenderincharge(String tenderincharge) {
+		this.tenderincharge = tenderincharge;
 	}
 	public String getEmail() {
 		return email;

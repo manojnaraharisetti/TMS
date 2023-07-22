@@ -48,16 +48,17 @@
                     </div>
                   </div>
              
-                  <label class="fieldlabels">Username: *</label>
-                 <h:inputText type="text" name="username"
-										value="#{ongoingtender.username}" id="username" required="true" validatorMessage="username should not be null"/>
+                  <label class="fieldlabels">Tender Incharge: *</label>
+                 <h:inputText type="text" name="tenderincharge"
+										value="#{ongoingtender.tenderincharge}" id="tenderincharge"  validatorMessage="username should not be null" />
                        <label class="fieldlabels">Email: *</label>
                   <h:inputText type="email" name="email" required="required"
 										value="#{ongoingtender.email}"
 										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
                    <label class="fieldlabels">Tender Name: *</label>
-                  
+                  <div class="fieldlabels222">
                    <h:selectOneMenu value="#{ongoingtender.tendername}" class="fieldlabels1">
+                 <f:selectItem itemValue="" itemLabel="Select One" />
                 <f:selectItem itemValue="Construction of a new office building" itemLabel="	Construction of a new office building" />
                 <f:selectItem itemValue="Hospital Management" itemLabel="Hospital Management" />
                 <f:selectItem itemValue="Building Bridges" itemLabel="	Building Bridges" />
@@ -65,7 +66,7 @@
                  <f:selectItem itemValue="Petrol Bunks lease" itemLabel="Petrol Bunks lease" />
                 
             </h:selectOneMenu>
-            <br></br>
+            </div>
                   <label class="fieldlabels">Organisation Name: *</label>
                  <h:inputText type="text" name="orgname"
 										value="#{ongoingtender.orgname}" id="orgname" required="true" />

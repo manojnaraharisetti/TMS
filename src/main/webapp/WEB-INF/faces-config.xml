@@ -29,5 +29,13 @@
 			<to-view-id>/login.jsf</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/tender.jsf</from-view-id>
+		<navigation-case>
+			<from-outcome>ongoingtenders</from-outcome>
+			<to-view-id>/ongoingtenders.jsf</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 
 </faces-config>

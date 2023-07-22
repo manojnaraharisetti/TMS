@@ -12,7 +12,7 @@ import com.klu.tms.signupentity.RegisterUser;
 @ManagedBean(name = "ongoingtender", eager = true)
 @RequestScoped
 public class OngoingTenderData {
-	private String username;
+	private String tenderincharge;
 	private String email;
 	private String tendername;
 	private String orgname;
@@ -24,11 +24,12 @@ public class OngoingTenderData {
 	private String pan;
 	private String gst;
 	private String res_message;
-	public String getUsername() {
-		return username;
+	
+	public String getTenderincharge() {
+		return tenderincharge;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setTenderincharge(String tenderincharge) {
+		this.tenderincharge = tenderincharge;
 	}
 	public String getEmail() {
 		return email;
@@ -104,7 +105,7 @@ public class OngoingTenderData {
 	public String ongoingTender() {
 		try {
 			OngoingTender e = new OngoingTender();
-			e.setUsername(username);
+			e.setTenderincharge(tenderincharge);
 			e.setEmail(email);
 			e.setTendername(tendername);
 			e.setOrgname(orgname);
@@ -119,7 +120,7 @@ public class OngoingTenderData {
 		} catch (Exception e1) {
 			res_message = e1.getMessage();
 		}
-		return "wkjbfvkwjarbfkjhrbkjra";
+		return "ongoingtenders";
 	}
 	
 }
