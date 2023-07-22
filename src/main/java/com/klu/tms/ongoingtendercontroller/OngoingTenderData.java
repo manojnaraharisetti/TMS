@@ -1,13 +1,14 @@
 package com.klu.tms.ongoingtendercontroller;
 
+import java.util.List;
+
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 import com.klu.tms.ongoingtenderbean.OngoingTenderBean;
 import com.klu.tms.ongoingtenderentity.OngoingTender;
-import com.klu.tms.signupbean.RegisterUserBean;
-import com.klu.tms.signupentity.RegisterUser;
+
 
 @ManagedBean(name = "ongoingtender", eager = true)
 @RequestScoped
@@ -24,7 +25,19 @@ public class OngoingTenderData {
 	private String pan;
 	private String gst;
 	private String res_message;
+	private List<OngoingTender> list;
 	
+	public List<OngoingTender> getList() {
+		try {
+			list = eb.getTenderData();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return list;
+	}
+	public void setList(List<OngoingTender> list) {
+		this.list = list;
+	}
 	public String getTenderincharge() {
 		return tenderincharge;
 	}

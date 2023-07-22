@@ -1,0 +1,111 @@
+
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<title>Tender History</title>
+<style>
+
+
+.form-tender form {
+
+	width:auto;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.75);
+	backdrop-filter: blur(10px);
+	box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.form-tender b {
+	color: white;
+}
+
+.tenderh1  {
+margin-top:1.5%;
+	text-align:center;
+	color: black;
+	text-decoration: underline;
+	margin-bottom: 1.5%;
+}
+
+.form-tender table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.form-tender th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+.form-tender tr:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+</style>
+</head>
+<body>
+<ui:decorate template="index.xhtml">
+		<ui:define name="first">
+<div class="tenderh1">
+<h1 >Tender History</h1>
+</div>
+	<h:form class="form-tender">
+
+	
+		<h:dataTable var="r" value="#{ongoingtender.list}">
+			<h:column>
+				<f:facet name="header">
+	Tender-Incharge</f:facet>
+	#{r.tenderincharge}
+	</h:column>
+			<h:column>
+				<f:facet name="header">
+	Email-ID</f:facet>
+	#{r.email}</h:column>
+			<h:column>
+				<f:facet name="header">
+	Tender Name</f:facet>
+	#{r.tendername}</h:column>
+<h:column>
+				<f:facet name="header">
+	Organization Name</f:facet>
+	#{r.orgname}</h:column>
+	
+	<h:column>
+				<f:facet name="header">
+	Company's Address</f:facet>
+	#{r.companyadd}</h:column>
+	<h:column>
+				<f:facet name="header">
+	Contact Number</f:facet>
+	#{r.contactno1}</h:column>
+	<h:column>
+				<f:facet name="header">
+	Alternate Contact Number</f:facet>
+	#{r.contactno2}</h:column>
+	<h:column>
+				<f:facet name="header">
+	Quote Amount</f:facet>
+	#{r.amount}</h:column>
+	<h:column>
+				<f:facet name="header">
+	Aadhaar No</f:facet>
+	#{r.aadhaar}</h:column>
+	<h:column>
+				<f:facet name="header">
+	Pan No</f:facet>
+	#{r.pan}</h:column><h:column>
+				<f:facet name="header">
+	GST</f:facet>
+	#{r.gst}</h:column>
+	
+				
+		</h:dataTable>
+	</h:form>
+
+</ui:define>
+	</ui:decorate>
+</body>
+</html>
